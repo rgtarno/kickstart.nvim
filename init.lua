@@ -924,6 +924,12 @@ require('lazy').setup({
   -- require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
+  {
+    'nvim-telescope/telescope-file-browser.nvim',
+    dependencies = { 'nvim-telescope/telescope.nvim', 'nvim-lua/plenary.nvim' },
+    vim.keymap.set('n', '<leader>fb', ':Telescope file_browser<CR>'),
+    vim.keymap.set('n', '<leader>fc', ':Telescope file_browser path=%:p:h select_buffer=true<CR>'),
+  },
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
   --
